@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.danilo.appdebts.classes.Category;
+import com.example.danilo.appdebts.classes.Debts;
 import com.example.danilo.appdebts.dao.CategoryDAO;
 import com.example.danilo.appdebts.database.DataBaseHelper;
 
@@ -16,6 +17,8 @@ public class TelaInicial extends AppCompatActivity {
     private SQLiteDatabase mConection;
     private DataBaseHelper mDataHelper;
     private ConstraintLayout mLayout;
+    private CategoryDAO mCategoryDao;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,5 +44,13 @@ public class TelaInicial extends AppCompatActivity {
         } catch (SQLException e) {
             Snackbar.make(mLayout, e.toString(), Snackbar.LENGTH_LONG).show();
         }
+    }
+
+    public void populateDatabase(){
+        createConnection();
+        Category cat1 = new Category("");
+        cat1 = mCategoryDao.insert(cat1);
+
+        //Debts debt1 = new Debts(cat1, (float)79.80, )
     }
 }
