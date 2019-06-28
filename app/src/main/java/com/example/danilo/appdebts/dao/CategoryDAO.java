@@ -16,10 +16,13 @@ import java.util.List;
  */
 
 public class CategoryDAO {
+
     private SQLiteDatabase mConnection;
+
     public CategoryDAO(SQLiteDatabase conection){
         mConnection = conection;
     }
+
     public void insert(Category cat){
         ContentValues contentValues = new ContentValues();
         contentValues.put("tipo", cat.getTipo());
@@ -36,7 +39,11 @@ public class CategoryDAO {
 
 
     public void alter(Category cat){
-        
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("tipo", cat.getTipo());
+        String[] params = new String[1];
+        params[0] = String.valueOf(cat.getId());
+        mConnection.update("categoria", contentValues, "id = ?", params);
     }
 
     public List<Category> listCategories(){
