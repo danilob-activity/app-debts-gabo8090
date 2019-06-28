@@ -17,7 +17,7 @@ public class TelaInicial extends AppCompatActivity {
     private SQLiteDatabase mConection;
     private DataBaseHelper mDataHelper;
     private ConstraintLayout mLayout;
-    private CategoryDAO mCategoryDao;
+    //private CategoryDAO mCategoryDao;
 
 
     @Override
@@ -47,10 +47,11 @@ public class TelaInicial extends AppCompatActivity {
     }
 
     public void populateDatabase(){
-        createConnection();
-        Category cat1 = new Category("");
-        cat1 = mCategoryDao.insert(cat1);
+        //createConnection();
+        //Category cat1 = new Category("");
+        //cat1 = mCategoryDao.insert(cat1);
 
-        //Debts debt1 = new Debts(cat1, (float)79.80, )
+        //Debts debt1 = new Debts(cat1, (float)79.80, );
+        //debt1 = mDebtsDao.insert(debt1);
     }
 }
