@@ -44,30 +44,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="263dp" />
+        app:layout_constraintGuide_begin="229dp" />
 
     <ImageButton
         android:id="@+id/imageButtonPayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/Pagamento"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonAtualizar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_payment_black_18" />
 
     <ImageButton
         android:id="@+id/imageButtonAtualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/Atualizar"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_autorenew_black_18"
+        tools:layout_editor_absoluteX="335dp" />
 
     <ImageButton
         android:id="@+id/imageButtonDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/Deletar"
-        tools:layout_editor_absoluteX="344dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPayment"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_delete_black_18" />
 
 </android.support.constraint.ConstraintLayout>
